@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import Count from './components/Count'
-
 import logo from './logo.svg';
 import './App.css';
 

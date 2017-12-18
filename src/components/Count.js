@@ -8,14 +8,14 @@ export default class  Count  extends Component {
       super(props);
       this.state = {count: 0};
    }
-
+   
     render() {
         return (
             <div>
             <h1>Count: {this.state.count} </h1 >
-            <button onClick={this.add} > +1  </button>  
-            <button onClick={this.minus} > -1  </button>  
-            <button onClick={this.reset} > reset  </button>
+            <button id='plus' onClick={this.add} > +1  </button>  
+            <button id='minus'  onClick={this.minus} > -1  </button>  
+            <button id='reset'   onClick={this.reset} > reset  </button>
           </div>
         );
       }
@@ -31,12 +31,14 @@ export default class  Count  extends Component {
      
      minus = () => {
          console.log("minus ");
-         this.setState(() => ({ count: this.state.count -1})
+         this.setState(() => ({
+            count: this.state.count > 0 ? this.state.count -1 : 0
+          })
          );
       };
      
      reset  = () => {
-        this.setState(() => ({count: 0})
+        this.setState(() => ( {count: 0})
        );
       };
     }     
