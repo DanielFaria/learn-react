@@ -5,18 +5,21 @@ import Count from './../../components/Count';
 
 describe('Count Component', () => {
 
-    it('renders without crashing', () => {
-      shallow(<Count />);
+    let countComponent;
+    
+    beforeEach(()=>{
+        countComponent  = shallow(<Count />);
     });
    
     it('Are There 3 button ?', () => {
-       const wrapper =  shallow(<Count />);
-       expect(wrapper.find('button').length).toEqual(3);
+       expect(countComponent.find('button').length).toEqual(3);
     });
     
+
     it('Is the counter started with 0 ?', () => {
-        const wrapper =  shallow(<Count />);
-        expect(wrapper.find('h1').text().split(":")[1].trim()).toEqual('0');
+        expect(countComponent.state('count')).toEqual(0);
+        //Take  Html`s  atributtes doesn`t sound a great idea.
+        //expect(countComponent.find('h1').text().split(":")[1].trim()).toEqual('0');
     });
    
     it('After the click the counter is increase ?', () => {
