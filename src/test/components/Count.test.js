@@ -15,7 +15,6 @@ describe('Count Component', () => {
        expect(countComponent.find('button').length).toEqual(3);
     });
     
-
     it('Is the counter started with 0 ?', () => {
         expect(countComponent.state('count')).toEqual(0);
         //Take  Html`s  atributtes doesn`t sound a great idea.
@@ -36,5 +35,17 @@ describe('Count Component', () => {
         expect(wrapper.state('count')).toEqual(0);
         
     });
-
+   
+    it('Minus is disabled when count is 0?', () => {
+        //expect(minusButton).to.have.disabled();     
+       // expect(countComponent.find('disabled').length).toEqual(1);
+       expect(countComponent.find('#minus').prop('disabled')).toEqual(true);
+    });
+   
+    it('Minus is enable  when count is bigger than  0?', () => {
+       const wrapper =  shallow(<Count />);
+       wrapper.find('#plus').simulate('click');
+       expect(wrapper.find('#minus').prop('disabled')).toEqual(false);
+    });
+    
 });

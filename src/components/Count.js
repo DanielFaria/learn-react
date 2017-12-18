@@ -14,8 +14,8 @@ export default class  Count  extends Component {
             <div>
             <h1>Count: {this.state.count} </h1 >
             <button id='plus' onClick={this.add} > +1  </button>  
-            <button id='minus'  onClick={this.minus} > -1  </button>  
-            <button id='reset'   onClick={this.reset} > reset  </button>
+            <button id='minus' disabled={ this.state.count === 0 }  onClick={this.minus} > -1  </button>  
+            <button id='reset' onClick={this.reset} > reset  </button>
           </div>
         );
       }
