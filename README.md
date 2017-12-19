@@ -1,6 +1,5 @@
-Who Help to built this:
+Who Help-me to built this:
 
-hackernoon.com/react-stateless-functional-components-nine-wins-you-might-have-overlooked-997b0d933dbc
 
 -https://hackernoon.com/react-stateless-functional-components-nine-wins-you-might-have-overlooked-997b0d933dbc
 
