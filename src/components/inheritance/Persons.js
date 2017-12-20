@@ -11,8 +11,8 @@ export class Person extends Component{
     }
 
     iAm(){
-      //Why is necessary?
-      return `I am a person and my name is ${this.name.name}`;
+      //All parameters can be accessed by props 
+      return `I am a person and my name is ${this.props.name}`;
     }
     
     render(){
@@ -31,7 +31,7 @@ export class Student extends Person{
     }
     iAm(){
       console.log(this.name.name);
-      return `I am a student and my name is ${this.name.name}`;
+      return `I am a student and my name is ${this.props.name}`;
     }
 }
 
@@ -43,7 +43,7 @@ export class Traveller  extends Person {
     }
     
     iAm(){
-        return `I am a traveller and my name is ${this.name.name}`;
+        return `I am a traveller and my name is ${this.props.name}`;
     }
 
 

@@ -8,7 +8,7 @@ import Hello from './components/StateLessHello.js'
 import registerServiceWorker from './registerServiceWorker';
 //I can encapsulate a cointainer component like  that?
 //Eu não sabia. 
-let app = <div><Person/> <Student name={"Student"}/> <Traveller name={"Travller"}/> <Hello name={"React !!!"}/> <Count /> </div>;
+let app = <div><Person  name={"That`s a sample person"}/> <Student name={"Student"}/> <Traveller name={"Travller"}/> <Hello name={"React !!!"}/> <Count /> </div>;
 
 ReactDOM.render(app, document.getElementById('root'));
 registerServiceWorker();
