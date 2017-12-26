@@ -3,3 +3,15 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+
+#opaco {
+  opacity: 0.5;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+  border: 1px
+}
+
+#opaco:hover {
+  opacity: 1.0;
+  filter: alpha(opacity=100); /* For IE8 and earlier */
+}

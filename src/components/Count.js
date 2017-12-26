@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 
 
+/*
 
+Redux  - gerenciamento de estados
+Torna os componentes mais reutilizavéis
+*/
 export default class  Count  extends Component {
    //My first  constructor? I think which this component could  be easier
    constructor(props){
       super(props);
-      this.state = {count: 0};
+      this.state = {count: props.count};
    }
    
     render() {
@@ -43,6 +47,8 @@ export default class  Count  extends Component {
       };
     }     
 
-
+Count.defaultProps = {
+  count: 0
+};
 
 
