@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 
 /*
-
 Redux  - gerenciamento de estados
 Torna os componentes mais reutilizavéis
 */

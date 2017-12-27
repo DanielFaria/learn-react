@@ -12,6 +12,40 @@ export default class FormCoin extends Component {
                  
         
       }
+      
+      /**
+       * LifeCycle doesn`t exists in stateless component
+       */
+      componentDidMount(){
+        console.log('Did Mount');
+        try{
+          /**
+           * @Doubt the state changes here, so 
+           * update mount is called too.
+           */
+          const json  = localStorage.getItem('coins');
+          const coins = JSON.parse(json);
+          if(coins){
+              this.setState(() => ({coins: coins}));
+          }
+        }catch(e){
+
+        }
+        
+      }
+      
+      componentDidUpdate(prevProps, prevState){
+        if(prevState.coins.length !== this.state.coins.length){
+          console.log('Let save some data');
+          const jsonCoins = JSON.stringify(this.state.coins);
+          localStorage.setItem('coins', jsonCoins);
+        }
+        console.log('Did updade');
+      }
+
+      componentWillUnmount(){
+        console.log('Component will be gone');
+      }
 
       addNewCoin = (e) => {
         const coin = e.target.elements.coinName.value;
