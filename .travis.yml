@@ -7,8 +7,10 @@ node_js: '8'
 
 jobs:
   include:
-      if: branch = mast
+      if: branch = master
       env: FOO=foo
+      script:
+       - yarn lint
 
 jobs:
   include: 
