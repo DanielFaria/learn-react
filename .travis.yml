@@ -9,6 +9,7 @@ jobs:
   include:
       if: branch = master
       env: FOO=foo
+    - stage: lint
       script:
        - yarn lint
 
