@@ -17,8 +17,8 @@ jobs:
     script:
        - 'echo "$TRAVIS_PULL_REQUEST"'
     script: 
-       - if [ $TRAVIS_PULL_REQUEST == 'true' ];
-       then yarn  test;
-       else yarn test --coverage;
-       fi
-      
+       -  if [ $TRAVIS_PULL_REQUEST == 'true' ];
+          then yarn  test;
+          else make unittests;
+          fi
+  
