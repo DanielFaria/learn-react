@@ -24,6 +24,6 @@ jobs:
      
 before_script:
   - if [ $TRAVIS_PULL_REQUEST == 'true' ];
-    then make coverage;
-    else make unittests;
+    then yarn  test;
+    else yarn test --coverage;
     fi
