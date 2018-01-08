@@ -5,9 +5,9 @@ cache:
   - "node_modules"
 node_js: '8'
 jobs:
-  include: 
-    if: type = pull_request
-  - stage: unit tests   
+  include:  
+  - stage: unit tests 
+    if: type = pull_request  
     script:
        - 'echo "$TRAVIS_PULL_REQUEST"'
     script: 
