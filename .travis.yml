@@ -11,6 +11,7 @@ stages:
   - name: test-coverage 
     if: type NOT IN(pull_request)
  
+ 
 jobs:
   include: 
   - stage: test
