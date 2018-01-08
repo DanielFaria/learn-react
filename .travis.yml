@@ -17,6 +17,8 @@ jobs:
     script:
        - yarn test
  
+jobs:
+  include:
   - stage: test-coverage
     script:
        - yarn test --coverage
