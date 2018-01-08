@@ -4,11 +4,15 @@ cache:
   directories:
   - "node_modules"
 node_js: '8'
+
+jobs:
+  include:
+      if: branch = mast
+      env: FOO=foo
+
 jobs:
   include: 
-  - if: branch = mas 
   - stage: unit tests
-    if: branch = mas 
     script:
        - 'echo "$TRAVIS_PULL_REQUEST"'
     script: 
