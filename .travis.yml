@@ -9,9 +9,8 @@ stages:
   - name: test 
     if: type = pull_request
   - name: test-coverage 
-    if: type NOT IN(pull_request)
- 
- 
+    if: type branch IN(master)
+  
 jobs:
   include: 
   - stage: test
