@@ -13,7 +13,7 @@ jobs:
       if: branch = master
 jobs:
   include: 
-  if: type = pull_request
+  - if: type = pull_request
   - stage: unit tests
     script:
        - 'echo "$TRAVIS_PULL_REQUEST"'
