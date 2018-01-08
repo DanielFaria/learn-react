@@ -8,10 +8,6 @@ jobs:
   include:
   - stage: unit tests
     script: 
-      - |
-        if [ "${PULL_REQUEST}" == "false" ]; then
-          yarn test-coverage;
-        else
-           yarn test;  
-        fi
- 
+       - 'if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then yarn test --coverage; fi'
+       - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then yarn test; fi'
+

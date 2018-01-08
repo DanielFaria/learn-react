@@ -81,6 +81,7 @@ export default class FormCoin extends Component {
                 Coin Name:  <input name="coinName" />
                 <button >New</button>     
             </form>
+            
             <ListCoin coins={this.state.coins}  removeCoinHandle={this.removeCoin}/> 
           </div>
         ); 
