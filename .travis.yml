@@ -6,29 +6,10 @@ cache:
 node_js: '8'
 jobs:
   include:
-  - stage: lint
-    script:
-      - yarn run build-css
-      - yarn lint
   - stage: unit tests
     script: 
        - 'if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then yarn test --coverage; fi'
        - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then yarn test; fi'
 
 
-  - stage: deploy
-    before_script:
-      - yarn run build-css 
-      - yarn build
-    deploy:
-      provider: firebase
-      skip_cleanup: true
-      on:
-        branch: master
-notifications:
-  webhooks:
-    urls:
-      - https://webhooks.gitter.im/e/a387d084c573fd34e585
-    on_success: change
-    on_failure: always
-    on_start: always
+ 
