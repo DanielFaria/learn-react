@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
+import validator from 'validator'
 import ListCoin from './ListCoin'
+import Header   from '../Header'
+
 
 
 export default class FormCoin extends Component {
@@ -18,6 +21,7 @@ export default class FormCoin extends Component {
        */
       componentDidMount(){
         console.log('Did Mount');
+        console.log('Email is válido:' + validator.isEmail('teste'));
         try{
           /**
            * @Doubt the state changes here, so 
@@ -73,10 +77,9 @@ export default class FormCoin extends Component {
         return (
           <div align="center" >
             <form  onSubmit={this.addNewCoin}>
-                <h3> New Coins Must Inserted Here </h3>
+                <Header  headerTitle={'New Coins Must Inserted Here'} />
                 Coin Name:  <input name="coinName" />
-                <button >New</button> 
-                 
+                <button >New</button>     
             </form>
             <ListCoin coins={this.state.coins}  removeCoinHandle={this.removeCoin}/> 
           </div>
