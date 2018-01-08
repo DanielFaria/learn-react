@@ -19,7 +19,7 @@ jobs:
     script: 
        - 'if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then yarn test --coverage; fi'
        - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then yarn test; fi'
-    
+     if: branch = master
 after_success:
   - echo "Test Success - Branch($TRAVIS_BRANCH) Pull Request($TRAVIS_PULL_REQUEST) Tag($TRAVIS_TAG)"
   - if [[ "$TRAVIS_BRANCH" == "master" ]]; then echo -e "Push Container to Docker Hub"; fi
