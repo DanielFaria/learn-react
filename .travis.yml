@@ -8,11 +8,7 @@ node_js: '8'
 stages:
   - test 
   - test-coverage 
-jobs:
-  include: 
-  - stage: test
-    script:
-       - yarn test
+
  
 jobs:
   include:
@@ -20,4 +16,9 @@ jobs:
     script:
        - yarn test --coverage
     if: type branch IN(master)
-       
+
+jobs:
+  include: 
+  - stage: test
+    script:
+       - yarn test       
