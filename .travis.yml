@@ -13,12 +13,13 @@ jobs:
       if: branch = master
 jobs:
   include: 
+  - if: branch = ma
   - stage: unit tests
     script:
        - 'echo "$TRAVIS_PULL_REQUEST"'
     script: 
        - yarn test
-  - if: branch = ma
+ 
     
      
 after_success:
