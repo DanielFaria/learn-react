@@ -12,6 +12,8 @@ export default class FormCoin extends Component {
         this.removeCoin = this.removeCoin.bind(this);   
       }
       
+
+      
       /**
        * LifeCycle doesn`t exists in stateless component
        */
