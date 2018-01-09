@@ -3,8 +3,6 @@ import validator from 'validator'
 import ListCoin from './ListCoin'
 import Header   from '../Header'
 
-
-
 export default class FormCoin extends Component {
 
       constructor(props){
