@@ -15,7 +15,7 @@ script: echo $FOO
 stages:
   - test 
   - name: coverage
-    if: (NOT (type IN (push, pull_request)))
+    if: (NOT (type = pull_request ))
   
 jobs:
   include:
