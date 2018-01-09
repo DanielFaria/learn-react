@@ -14,13 +14,14 @@ script: echo $FOO
 
 stages:
   - test 
-  - test-coverage 
- 
+  - name: coverage
+    if: branch = master
+  
 jobs:
   include:
-  - stage: test-coverage
+  - stage: coverage
     script:
-       - yarn test --coverage
+       - echo coverage
   - stage: test
     script:
        - yarn test
