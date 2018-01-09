@@ -9,9 +9,7 @@ export default class FormCoin extends Component {
         super(props);
         this.state = {coins: [], erros:[]};
         //this.addNewCoin = this.addNewCoin.bind(this);
-        this.removeCoin = this.removeCoin.bind(this);
-                 
-        
+        this.removeCoin = this.removeCoin.bind(this);   
       }
       
       /**
