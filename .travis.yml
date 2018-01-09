@@ -24,6 +24,5 @@ jobs:
   - stage: test
     script:
        - yarn test
-  - stage: deploy
-      script: echo Deploy
+  
                  
